@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Grocery Shop</title>
+<meta charset="UTF-8">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="javascript.js" />
+
+        <script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+    </script>
+
+    <script> 
+$(document).ready(function(){
+  $(".prod_buy").click(function(){
+    $(".anime").animate({
+      down: '50px',
+      opacity: '1',
+      height: '160px',
+      width: '160px'
+    });
+  });
+});
+</script> 
+
+<script> 
+function indexCart(y){
+if (y == 1){
+  document.getElementById("add1").addEventListener("click", AddCart("Pepsi" , "5 EGP"));
+  document.getElementById("add1").disabled = true;
+}
+
+else if (y == 2){
+  document.getElementById("add2").addEventListener("click", AddCart("Sugar" , "7 EGP"));
+  document.getElementById("add2").disabled = true;
+}
+else if (y == 3){
+  document.getElementById("add3").addEventListener("click", AddCart("1Kg tomato" , "14 EGP"));
+  document.getElementById("add3").disabled = true;
+}
+else if (y == 4){
+  document.getElementById("add4").addEventListener("click", AddCart("Kitchen Towel" , "13 EGP"));
+  document.getElementById("add4").disabled = true;
+}
+else if (y == 5){
+  document.getElementById("add5").addEventListener("click", AddCart("Eggs Carton" , "25 EGP"));
+  document.getElementById("add5").disabled = true;
+}
+else if (y == 6){
+  document.getElementById("add6").addEventListener("click", AddCart("Toast" , "18 EGP"));
+  document.getElementById("add6").disabled = true;
+}
+else {
+
+}
+
+}
+
+</script>
+
+<script>
+  function AddCart(name, price){
+var item = new Item(name, price);
+var div = document.createElement("P");
+
+document.getElementById("node1").appendChild(div);
+div.id = "newdiv";
+div.innerHTML = name + " " + price +  "<br/>";
+
+
+
+
+var div2 = document.createElement("A");
+
+document.getElementById("node1").appendChild(div2);
+div2.id = "newdiv2";
+div2.innerHTML = "remove" + "<br/>" + "<br/>";
+div2.onclick = function remove1(){document.getElementById("newdiv").remove();
+document.getElementById("newdiv2").remove();
+}
+}
+
+function Item( name ,  price){
+    this.name = name;
+    this.price = price;
+}
+
+
+
+  
+
+
+</script>
+</head>
+<body>
+<div id="main_container">
+  <div id="header">
+    <div class="top_right">
+      <div class="languages">
+        <div class="lang_text">Languages:</div>
+        <a href="#" class="lang"><img src="images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img src="images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a> </div>
+        <div>  <a href = "images/logo%20(2).png" ></a></div>
+    </div>
+   
+  </div>
+   
+  <div id="main_content">
+    <div id="menu_tab">
+      <ul class="menu">
+        <li><a href="index.html" class="nav"> Home </a></li>
+        <li class="divider"></li>
+        <li><a href="#" class="nav">Products</a></li>
+        <li class="divider"></li>
+       
+        <li><a href="MyAccount.html" class="nav">My account</a></li>
+        <li class="divider"></li>
+        
+        <li><a href="#" class="nav">My Orders </a></li>
+        <li class="divider"></li>
+        <li><a href="contact.html" class="nav">Contact Us</a></li>
+        <li>      <input type="text" name="newsletter" id="searchbox" value=""/></li>
+          <li> <img src="images/searchicon.png" id = "srch" height="20px" width="20px"></li>
+     
+      </ul>
+    
+    </div>
+   
+    <div class="current_navigation"> Navigation: <span class="current">Home</span> </div>
+    <div class="left_content">
+      <div class="title_box">Categories</div>
+      <ul class="left_menu">
+        <li class="odd"><a href="#">Diary & Eggs</a></li>
+        <li class="even"><a href="#">Fruit & Vegetables</a></li>
+        <li class="odd"><a href="#">Bakery</a></li>
+        <li class="even"><a href="#">Nuts & Seeds</a></li>
+        <li class="odd"><a href="#">Chips & Snacks</a></li>
+        <li class="even"><a href="#">Candy</a></li>
+        <li class="odd"><a href="#">Beverages</a></li>
+        <li class="even"><a href="#">Household Care </a></li>
+        <li class="odd"><a href="#">Meat & Fish</a></li>
+        <li class="even"><a href="#">Herbs & Spices</a></li>
+  
+      </ul>
+      <div class="title_box">Special Offers</div>
+      <div class="border_box">
+        <div class="product_title"><a href="#">Garnier Micellar Water, 400ml</a></div>
+        <div class="product_img"><a href="#"><img src="images/garn.jpg" alt="" border="0" height="100px" width="50px" /></a></div>
+        <div class="prod_price"><span class="reduce">135EGP</span> <span class="price">104.69EGP</span></div>
+      </div>
+        <p> -----------------------------------------------</p>
+          <div class="border_box">
+        <div class="product_title"><a href="#">2 Kg Bananas</a></div>
+        <div class="product_img"><a href="#"><img src="images/banana.jfif" alt="" border="0" height="100px" width="90px" /></a></div>
+        <div class="prod_price"><span class="reduce">50EGP</span> <span class="price">37EGP</span></div>
+      </div>
+     
+    </div>
+
+    <div class="center_content">
+      <div class="oferta"> <img src="images/kinder.png" width="365" height="143" border="0" class="oferta_img" alt="" />
+        <div class="oferta_details">
+          <div class="oferta_title">Kinder Bueno</div>
+          <div class="oferta_text"> 12 EGP </div>
+          <a href="#" class="prod_buyy">     details</a> </div>
+      </div>
+      <div class="center_title_bar">Latest Products</div>
+      <div class="prod_box">
+        <div class="center_prod_box" >
+            <div class="product_title"><a href="#">Pepsi Can</a></div>
+          <div class="product_img"><a href="#"><img src="images/pepsi.png" height= 70px width = 40px alt="" border="0" /></a></div>
+          <div class="prod_price"> <span class="price">5 EGP</span></div>
+        </div>
+          <div class="prod_details_tab"> <button id = "add1" onclick= "indexCart(1)"  class="prod_buy">Add to Cart</button> <button href="#" class="prod_details">Details</button> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box" id = "pr2">
+          <div class="product_title"><a href="#">Sugar</a></div>
+          <div class="product_img"><a href="#"><img src="images/sugar.jpg" height = "70px" width="60px" alt="" border="0" /></a></div>
+          <div class="prod_price"> <span class="price">7 EGP</span></div>
+        </div>
+        <div class="prod_details_tab"> <button id = "add2" onclick= "indexCart(2)"  class="prod_buy">Add to Cart</button> <button href="#" class="prod_details">Details</button> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box" id = "pr3">
+          <div class="product_title"><a href="#">Tomato</a></div>
+          <div class="product_img"><a href="#"><img src="images/tomato.jfif"height= 70px width = 50px alt="" border="0" /></a></div>
+          <div class="prod_price"> <span class="price">14 EGP</span></div>
+        </div>
+        <div class="prod_details_tab"> <button id = "add3" onclick= "indexCart(3)"  class="prod_buy">Add to Cart</button> <button href="#" class="prod_details">Details</button> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box" id = "pr4">
+          <div class="product_title"><a href="#">Kitchen Towel</a></div>
+          <div class="product_img"><a href="#"><img src="images/towel.jpeg" height= 70px width = 50px alt="" border="0" /></a></div>
+          <div class="prod_price"> <span class="price">13 EGP</span></div>
+        </div>
+        <div class="prod_details_tab"> <button id = "add4" onclick= "indexCart(4)"  class="prod_buy">Add to Cart</button> <button href="#" class="prod_details">Details</button> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box" id = "pr5">
+          <div class="product_title"><a href="#">Eggs Carton</a></div>
+          <div class="product_img"><a href="#"><img src="images/egg.jfif" height= 70px width = 50px alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">25 EGP</span></div>
+        </div>
+        <div class="prod_details_tab"> <button id = "add5" onclick= "indexCart(5)"  class="prod_buy">Add to Cart</button> <button href="#" class="prod_details">Details</button> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box" id = "pr6">
+          <div class="product_title"><a href="#">Toast</a></div>
+          <div class="product_img"><a href="#"><img src="images/bread.jfif" height= 70px width = 50px alt="" border="0" /></a></div>
+          <div class="prod_price"> <span class="price">18 EGP</span></div>
+        </div>
+        <div class="prod_details_tab"> <button id = "add6" onclick= "indexCart(6)"  class="prod_buy">Add to Cart</button> <button href="#" class="prod_details">Details</button></div>
+      </div>
+        
+    
+      
+    
+    </div>
+   
+    <div class="right_content">
+     
+<div class = "anime" > 
+<img  src="images/shoppingcart.png" height="150px" width = "150px">
+
+</div> 
+
+
+      <div class="shopping-cart" id = "shc">
+  
+  <div class="title1">
+    Shopping Cart
+  </div>
+ 
+
+  <div class="item" id = "node1">
+      
+    
+      
+    </div>
+ 
+  
+  </div>
+ 
+
+  
+ 
+
+
+</div>
+   
+  </div>
+
+  <div class="footer">
+    <div id="flip">click to show footer</div>
+    <div id="panel">
+        
+         <div class="left_footer"> <img src="images/logo%20(2).png" alt="" width="89" height="80"/> </div>
+    <div class="center_footer"> All Rights Reserved 2008<br />
+  
+      <img src="images/payment.gif" alt="" height= "25px"> </div>
+        
+        <img height="150px"  src="images/popular-market.jpg"></div>
+
+
+</div>
+ 
+   
+</div>
+
+</body>
+</html>

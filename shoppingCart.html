@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Grocery Shop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="shoppingCart.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="shoppingCart.js"></script>
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="header">
+            <div class="top_right">
+                <div class="languages">
+                    <div class="lang_text">Languages:</div>
+                    <a href="#" class="lang"><img src="images/en.gif" alt="" border="0" /></a> <a href="#"
+                        class="lang"><img src="images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
+                </div>
+                <div> <a href="images/logo%20(2).png"></a></div>
+            </div>
+
+        </div>
+        <div id="main_content">
+            <div id="menu_tab">
+                <ul class="menu">
+                    <li><a href="#" class="nav"> Home </a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="nav">Products</a></li>
+                    <li class="divider"></li>
+
+                    <li><a href="#" class="nav">My account</a></li>
+                    <li class="divider"></li>
+
+                    <li><a href="#" class="nav">My Orders </a></li>
+                    <li class="divider"></li>
+                    <li><a href="contact.html" class="nav">Contact Us</a></li>
+                    <li> <input type="text" name="newsletter" id="searchbox" value="" /></li>
+                    <li> <img src="images/searchicon.png" id="srch" height="20px" width="20px"></li>
+
+                </ul>
+
+            </div>
+
+            <div class="crumb_navigation"> Navigation: <span class="current">Home</span> </div>
+            <div class="left_content">
+                <div class="title_box">Categories</div>
+                <ul class="left_menu">
+                    <li class="odd"><a href="#">Diary & Eggs</a></li>
+                    <li class="even"><a href="#">Fruit & Vegetables</a></li>
+                    <li class="odd"><a href="#">Bakery</a></li>
+                    <li class="even"><a href="#">Nuts & Seeds</a></li>
+                    <li class="odd"><a href="#">Chips & Snacks</a></li>
+                    <li class="even"><a href="#">Candy</a></li>
+                    <li class="odd"><a href="#">Beverages</a></li>
+                    <li class="even"><a href="#">Household Care </a></li>
+                    <li class="odd"><a href="#">Meat & Fish</a></li>
+                    <li class="even"><a href="#">Herbs & Spices</a></li>
+
+                </ul>
+                <div class="title_box">Special Products</div>
+                <div class="border_box">
+                    <div class="product_title"><a href="#">Makita 156 MX-VL</a></div>
+                    <div class="product_img"><a href="#"><img src="images/p1.jpg" alt="" border="0" /></a></div>
+                    <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+                </div>
+                <div class="title_box">Newsletter</div>
+                <div class="border_box">
+                    <input type="text" name="newsletter" class="newsletter_input" value="your email" />
+                    <a href="#" class="join">subscribe</a>
+                </div>
+                <div class="banner_adds"> <a href="#"><img src="images/bann2.jpg" alt="" border="0" /></a> </div>
+            </div>
+
+            <div class="center_content">
+                <div class="shopping-cart">
+                    <div class="center_title_bar">Latest Products</div>
+                    <div class="item_SC">
+                        <div class="buttons">
+                            <span class="delete-btn"></span>
+                        </div>
+
+                        <div class="image_SC">
+                            <img src="images/p1.jpg" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <span>156 MX-VL</span>
+                            <span>Makita</span>
+                        </div>
+
+                        <div class="quantity">
+                            <button class="icon-btn plus-btn" type="button" name="button"  >
+                                <span class="material-icons md-18 md-dark">add</span>
+                            </button>
+                            <input type="text" name="name" value="1">
+                            <button class="icon-btn minus-btn"   type="button" name="button">
+                                <span class="material-icons md-18 md-dark">remove</span>
+                            </button>
+                        </div>
+
+                        <div class="total-price">$270</div>
+                    </div>
+
+                    <!-- Product #2 -->
+                    <div class="item_SC">
+                        <div class="buttons">
+                            <span class="delete-btn"></span>
+                        </div>
+
+                        <div class="image_SC">
+                            <img src="images/p2.jpg" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <span>XC</span>
+                            <span>Bosch</span>
+                        </div>
+
+                        <div class="quantity">
+                            <button class="icon-btn plus-btn" type="button" name="button"  >
+                                <span class="material-icons md-18 md-dark">add</span>
+                            </button>
+                            <input type="text" name="name" value="1">
+                            <button class="icon-btn  minus-btn"   type="button" name="button">
+                                <span class="material-icons md-18 md-dark">remove</span>
+                            </button>
+                        </div>
+
+                        <div class="total-price">$270</div>
+                    </div>
+
+                    <!-- Product #3 -->
+                    <div class="item_SC">
+                        <div class="buttons">
+                            <span class="delete-btn"></span>
+                        </div>
+
+                        <div class="image_SC">
+                            <img src="images/p4.jpg" alt="" />
+                        </div>
+
+                        <div class="description">
+                            <span>PP4</span>
+                            <span>Lotus</span>
+                        </div>
+
+                        <div class="quantity">
+                            <button class="icon-btn plus-btn" type="button" name="button"  > 
+                                <span class="material-icons md-18 md-dark">add</span>
+                            </button>
+                            <input type="text" name="name" value="1">
+                            <button class="icon-btn  minus-btn"   type="button" name="button" >
+                                <span class="material-icons md-18 md-dark">remove</span>
+                            </button>
+                        </div>
+
+                        <div class="total-price">$270</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_content">
+
+                <div class="shopping_cart">
+                    <div class="title_box">Shopping cart</div>
+                    <div class="cart_details"> 3 items <br />
+                        <span class="border_cart"></span> Total: <span class="price">350egp</span>
+                    </div>
+                    <div class="cart_icon"><a href="shoppingCart.html"><img src="images/shoppingcart.png" alt=""
+                                width="35" height="35" border="0" /></a></div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end of main content -->
+        <div class="footer">
+            <div class="left_footer"> <img src="images/logo%20(2).png" alt="" width="89" height="42" /> </div>
+            <div class="center_footer"> Template name. All Rights Reserved 2008<br />
+                <a href="http://csscreme.com"><img src="images/csscreme.jpg" alt="csscreme" title="csscreme"
+                        border="0" /></a><br />
+                <img src="images/payment.gif" alt="" />
+            </div>
+            <div class="right_footer"> <a href="#">home</a> <a href="#">about</a> <a href="#">sitemap</a> <a
+                    href="#">rss</a>
+                <a href="#">contact us</a>
+            </div>
+        </div>
+    </div>
+    <!-- end of main_container -->
+</body>
+
+</html>

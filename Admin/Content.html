@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Grocery Shop</title>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script> 
+  $(document).ready(function(){
+    $("#flip").click(function(){
+      $("#panel").slideDown("slow");
+    });
+  });
+      </script>
+
+
+  
+  <script>
+    function removee(y){
+
+  var div = document.createElement("P");
+  
+if (y==1){
+document.getElementById("re1").remove();
+ 
+    }
+  
+  else if (y==2){
+
+    document.getElementById("re2").remove();
+
+  }
+  else if (y==3){
+
+document.getElementById("re3").remove();
+
+}
+else if (y==4){
+
+document.getElementById("re4").remove();
+
+}
+
+ else {
+
+
+ }
+  
+  }
+
+  
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+<div id="main_container">
+ 
+   
+    
+    <div id="header">
+    <div class="top_right">
+      <div class="languages">
+        <div class="lang_text">Languages:</div>
+        <a href="#" class="lang"><img src="images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img src="images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a> </div>
+        <div>  <a href = "images/logo%20(2).png" ></a></div>
+    </div>
+   
+  </div>
+   
+  <div id="main_content">
+    <div id="menu_tab">
+      <ul class="menu">
+        
+       
+        <li><a href="MyAccount.html" class="nav">My account</a></li>
+        <li class="divider"></li>
+        
+        <li><a href="#" class="nav"> Manage Accounts </a></li>
+        <li class="divider"></li>
+        <li><a href="Content.html" class="nav">Edit Content</a></li>
+        
+     
+      </ul>
+    
+  
+  </div>
+</div>
+
+<div id="container">
+  <div class="centerCont">
+    
+
+    <br />
+  
+    <div id="main">
+      
+   
+      <div id="content">
+  
+        <div class="box">
+         
+          <div class="box-head">
+            <h2 class="left">Current Products</h2>
+            <div class="right">
+              <label> Search Products</label>
+              <input id = "myInput" type="text" class="field" />
+           
+            </div>
+          </div>
+       
+          <div class="table">
+            <table  id = " tble"width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+               
+                <th>Title</th>
+                <th>Date</th>
+                <th>Added by</th>
+                <th width="110" class="ac">Content Control</th>
+              </tr>
+              <tbody id="myTable"></tbody>
+              <tr id = "re1">
+               
+                <td><h3><a href="#">Pepsi Can.</a></h3></td>
+                <td class = "d1">12.05.09</td>
+                <td><a href="#">Administrator</a></td>
+                <td><a onclick="removee(1)" href="#" class="ico del">Delete</a></td>
+              </tr>
+              <tr id = "re2">
+            
+                <td><h3><a href="#">Kitchen Towel.</a></h3></td>
+                <td class = "d1">1.12.09</td>
+                <td><a href="#">Administrator2</a></td>
+                <td><a onclick="removee(2)" href="#" class="ico del">Delete</a></td>
+              </tr>
+              <tr id = "re3" >
+            
+                <td><h3><a href="#">Tomato</a></h3></td>
+                <td class = "d1">1.1.09</td>
+                <td><a href="#">Administrator2</a></td>
+                <td><a onclick="removee(3)" href="#" class="ico del">Delete</a></td>
+              </tr>
+              <tr id = "re4"  >
+            
+                <td><h3><a href="#">Sugar</a></h3></td>
+                <td class = "d1">3.1.06</td>
+                <td><a href="#">Administrator</a></td>
+                <td><a onclick="removee(4)" href="#" class="ico del">Delete</a></td>
+              </tr>
+            </table>
+           
+<br>
+<br>
+<br>
+
+         
+              
+          </div>
+          
+        </div>
+     
+      
+     
+    
+      </div>
+     
+      <div class="cl">&nbsp;</div>
+    </div>
+
+  </div>
+</div>
+<div class="footer">
+  <div id="flip">click to show footer</div>
+  <div id="panel">
+      
+       <div class="left_footer"> <img src="images/logo%20(2).png" alt="" width="89" height="80"/> </div>
+  <div class="center_footer"> All Rights Reserved 2008<br />
+
+    <img src="images/payment.gif" alt="" height= "25px"> </div>
+      
+      <img height="150px"  src="images/popular-market.jpg"></div>
+
+
+</div>
+</body>
+</html>
+    
