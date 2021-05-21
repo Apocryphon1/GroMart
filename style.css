@@ -626,3 +626,186 @@ msg-e p {
 .table {
    height: 500px;
 }
+
+/* Manage Accounts Adham183024 */
+
+.table-MA {
+   border-collapse: collapse;
+   margin: 25px 0;
+   font-size: 16px;
+   font-family: sans-serif;
+   min-width: 700px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-MA thead tr {
+   background-color: #4CAF50;
+   color: #ffffff;
+   text-align: left;
+}
+
+.table-MA th, .table-MA td {
+   padding: 12px 15px;
+}
+
+.table-MA tbody tr {
+   border-bottom: 1px solid #dddddd;
+}
+
+.table-MA tbody tr.active-row {
+   font-weight: bold;
+   color: #388E3C;
+}
+
+.main_content {
+   clear: both;
+   min-height: 700px;
+}
+
+.pull-right {
+   position: absolute;
+   right: 500px;
+   top: 205px;
+}
+
+.round-button-MA {
+   font-family: 'IBM Plex Sans', sans-serif;
+   height: 40px;
+   line-height: 40px;
+   width: 40px;
+   font-size: 24px;
+   font-weight: bold;
+   border-radius: 50%;
+   background-color: #4CAF50;
+   color: white;
+   text-align: center;
+   cursor: pointer;
+   display: block;
+}
+
+.round-button-MA:hover {
+   background: #A5D6A7;
+   color: black;
+}
+
+/* Shopping cart Adham183024 */
+
+.shopping_cart {
+   background: #FFFFFF;
+   box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.10);
+   border-radius: 6px;
+   display: flex;
+   flex-direction: column;
+}
+
+.item_SC {
+   padding: 20px 30px;
+   height: 120px;
+   display: flex;
+}
+
+.item_SC:nth-child(3) {
+   border-top: 1px solid #E1E8EE;
+   border-bottom: 1px solid #E1E8EE;
+}
+
+.buttons {
+   position: relative;
+   padding-top: 30px;
+   margin-right: 20px;
+}
+
+.delete-btn {
+   display: inline-block;
+   Cursor: pointer;
+}
+
+.delete-btn {
+   width: 18px;
+   height: 17px;
+   background: url(images/close_black_18dp.svg) no-repeat center;
+}
+
+.image_SC {
+   margin-right: 25px;
+}
+
+.description {
+   padding-top: 10px;
+   margin-right: 30px;
+   width: 100px;
+}
+
+.description span {
+   display: block;
+   font-size: 14px;
+   color: #43484D;
+   font-weight: 400;
+}
+
+.description span:first-child {
+   margin-bottom: 5px;
+}
+
+.description span:last-child {
+   font-weight: 300;
+   margin-top: 8px;
+   color: #86939E;
+}
+
+.quantity {
+   padding-top: 20px;
+   margin-right: 60px;
+}
+
+.quantity input {
+   -webkit-appearance: none;
+   border: none;
+   text-align: center;
+   width: 32px;
+   font-size: 16px;
+   color: #43484D;
+   font-weight: 300;
+}
+
+.quantity button[class*=btn] {
+   width: 30px;
+   height: 30px;
+   background-color: #E1E8EE;
+   border-radius: 6px;
+   border: none;
+   cursor: pointer;
+}
+
+.icon-btn span {
+   margin-left: -2px;
+}
+
+.quantity button:focus, .quantity input:focus {
+   outline: 0;
+}
+
+.total-price {
+   width: 83px;
+   padding-top: 27px;
+   text-align: center;
+   font-size: 16px;
+   color: #43484D;
+   font-weight: 300;
+}
+
+@media (max-width: 800px) {
+   .shopping-cart {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+   }
+   .quantity, .description {
+      width: 100%;
+      text-align: center;
+      margin: 6px 0;
+   }
+   .buttons {
+      margin-right: 20px;
+   }
+}

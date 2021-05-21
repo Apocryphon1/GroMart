@@ -20,8 +20,8 @@ function addUser(username, email, password, role) {
 }
 addUser("adhamahmed", "jacobthornton@email.com", "4sd672", "Admin");
 addUser("mohsenmohsen", "mohsenmoshen@email.com", "988756", "User");
-addUser("mohsenmohsen", "mohsenmoshen@email.com", "988756", "User");
-addUser("mohsenmohsen", "mohsenmoshen@email.com", "988756", "User");
+addUser("elwii", "elwii@email.com", "fds45saf6", "User");
+addUser("omarrr452", "omarmohamed@email.com", "ds14f54g8", "Admin");
 
 function addRow(user) {
     $(document).ready(function () {
@@ -48,6 +48,14 @@ function buildTable(arr) {
 }
 
 buildTable(allUsers);
+
+
+
+$(document).ready(function () {
+    $("#flip").click(function () {
+        $("#panel").slideDown("slow");
+    });
+});
 
 
 

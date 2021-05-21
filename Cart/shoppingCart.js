@@ -29,4 +29,10 @@ $(document).ready(function () {
 
         $input.val(value);
     });
+
+
+    $("#flip").click(function () {
+        $("#panel").slideDown("slow");
+    });
+
 });
