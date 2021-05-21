@@ -811,6 +811,7 @@ msg-e p {
 }
 
 /* Product Details && Product List ELWII */
+
 .price_container_PD {
    box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, 0.10);
    border-radius: 6px;
@@ -927,4 +928,78 @@ p.bold {
 .byline a {
    text-decoration: none;
    color: #d74b4b;
+}
+
+/* ------------------------HASSAN------------------ */
+
+.MyOrders #OrderHeaders {
+   font-weight: bold;
+   font-size: 150%;
+   color: rgb(40, 71, 156);
+   word-spacing: 100px;
+}
+
+.MyOrders #Orders {
+   padding-top: 10px;
+   padding-left: 120px;
+   width: 210px;
+}
+
+.MyOrders .OrderTitle {
+   font-weight: bold;
+   font-size: 120%;
+   padding: 1px;
+   Margin-left: 73px;
+   color: rgb(40, 156, 67);
+   text-decoration: none;
+}
+
+.MyOrders #itemNames1 {
+   display: inline-block;
+   float: left;
+   width: 100px;
+}
+
+.MyOrders #prices1 {
+   float: right;
+   padding-right: 32px;
+}
+
+.MyOrders #itemNames2 {
+   display: inline-block;
+   float: left;
+   width: 100px;
+}
+
+.MyOrders #prices2 {
+   float: right;
+   padding-right: 32px;
+}
+
+.Track_Order1 #titles1 {
+   padding-top: 30px;
+   float: left;
+   padding-left: 120px;
+   font-weight: bold;
+   color: rgb(40, 156, 67);
+}
+
+.Track_Order1 #variables1 {
+   padding-top: 30px;
+   float: right;
+   padding-right: 120px;
+}
+
+.Track_Order2 #titles2 {
+   padding-top: 30px;
+   float: left;
+   padding-left: 120px;
+   font-weight: bold;
+   color: rgb(40, 156, 67);
+}
+
+.Track_Order2 #variables2 {
+   padding-top: 30px;
+   float: right;
+   padding-right: 120px;
 }
