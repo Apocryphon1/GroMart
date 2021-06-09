@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="manageAccounts.js"></script>
+    <?php include 'retrieveAccounts.php' ?>
 </head>
 
 <body>
@@ -17,8 +18,7 @@
             <div class="top_right">
                 <div class="languages">
                     <div class="lang_text">Languages:</div>
-                    <a href="#" class="lang"><img src="../images/en.gif" alt="" border="0" /></a> <a href="#"
-                        class="lang"><img src="../images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
+                    <a href="#" class="lang"><img src="../images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img src="../images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
                 </div>
                 <div> <a href="../images/logo%20(2).png"></a></div>
             </div>

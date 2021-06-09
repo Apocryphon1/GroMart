@@ -1,27 +1,32 @@
 allUsers = [];
 
-function addUser(username, email, password, role) {
-    var user = {
-        id: null,
-        username: null,
-        email: null,
-        password: null,
-        role: null
-    };
-    var id = allUsers.length;
-
-    user.id = ++id;
-    user.username = username;
-    user.email = email;
-    user.password = password;
-    user.role = role;
-
-    allUsers.push(user);
+function getCookie(name) {
+    const value = ";" + document.cookie;
+    const parts = value.split(";" + name + "=");
+    if (parts.length == 2) {
+        const vlu = parts.pop().split(";").shift();
+        const decode_vlu = decodeURIComponent(vlu);
+        return decode_vlu;
+    }
+    else
+        return '';
 }
-addUser("adhamahmed", "jacobthornton@email.com", "4sd672", "Admin");
-addUser("mohsenmohsen", "mohsenmoshen@email.com", "988756", "User");
-addUser("elwii", "elwii@email.com", "fds45saf6", "User");
-addUser("omarrr452", "omarmohamed@email.com", "ds14f54g8", "Admin");
+
+var oReq = new XMLHttpRequest(); // New request object
+oReq.onload = function () {
+
+    obj = JSON.parse(getCookie("AllUsers"));
+    allUsers = allUsers.concat(obj);
+    addAttributes(allUsers);
+};
+oReq.open("get", "retrieveAccounts.php", true);
+//Don't block the rest of the execution.
+//Don't wait until the request finishes to continue.
+oReq.send();
+
+function addAttributes(array) {
+    buildTable(allUsers);
+}
 
 function addRow(user) {
     $(document).ready(function () {
@@ -45,10 +50,35 @@ function buildTable(arr) {
     arr.forEach(child => {
         addRow(child);
     });
+
+    $(document).ready(function () {
+        $('#usersTable').after('<div id="pagination"></div>');
+        var rowsShown = 12; // Don't Ask why it divides by 2.
+        var rowsTotal = $('#usersTable tbody tr').length;
+        var numPages = rowsTotal / rowsShown;
+
+        for (i = 0; i < numPages; i++) {
+            var pageNum = i + 1;
+            $('#pagination').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
+        }
+        $('#pagination').addClass("pagination");
+        $('#usersTable tbody tr').hide();
+        $('#usersTable tbody tr').slice(0, rowsShown).show();
+        $('#pagination a:first').addClass('active');
+        $('#pagination a').bind('click', function () {
+
+            $('#pagination a').removeClass('active');
+            $(this).addClass('active');
+            var currPage = $(this).attr('rel');
+            var startItem = currPage * rowsShown;
+            var endItem = startItem + rowsShown;
+            $('#usersTable tbody tr').css('opacity', '0.0').hide().slice(startItem, endItem).
+                css('display', 'table-row').animate({ opacity: 1 }, 300);
+        });
+    });
+
+
 }
-
-buildTable(allUsers);
-
 
 
 $(document).ready(function () {
