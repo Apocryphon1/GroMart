@@ -26,7 +26,7 @@ function CreateOrder() {
 
 	prices1[0] = "5$";
 	prices1[1] = "2$";
-	prices1[3] = "3$";
+	prices1[2] = "3$";
 
 	prices2[0] = "3$";
 	prices2[1] = "5$";

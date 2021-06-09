@@ -82,6 +82,12 @@ function Item(name, price) {
     this.price = price;
 }
 
+$(document).ready(function () {
+    $("#flip").click(function () {
+        $("#panel").slideDown("slow");
+    });
+});
+
 
 
 

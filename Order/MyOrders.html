@@ -22,17 +22,17 @@
     <div id="main_content">
       <div id="menu_tab">
         <ul class="menu">
-          <li><a href="#" class="nav"> Home </a></li>
+          <li><a href="../index.html" class="nav"> Home </a></li>
           <li class="divider"></li>
-          <li><a href="#" class="nav">Products</a></li>
+          <li><a href="../Product/ProductList.html" class="nav">Products</a></li>
           <li class="divider"></li>
 
-          <li><a href="#" class="nav">My account</a></li>
+          <li><a href="../Login/MyAccount.html" class="nav">My account</a></li>
           <li class="divider"></li>
 
           <li><a href="#" class="nav">My Orders </a></li>
           <li class="divider"></li>
-          <li><a href="contact.html" class="nav">Contact Us</a></li>
+          <li><a href="../Contact/contact.html" class="nav">Contact Us</a></li>
           <li> <input type="text" name="newsletter" id="searchbox" value="" /></li>
           <li> <img src="../images/searchicon.png" id="srch" height="20px" width="20px"></li>
 
@@ -66,49 +66,51 @@
       </div>
 
       <div class="center_content">
-        <button onclick="CreateOrder()">Show Your Orders</button>
+	<button onclick = "CreateOrder()">Show Your Orders</button>
+	
+	<div id = "Orders">
 
-        <div id="Orders">
-
-          <div id="OrderHeaders"></div>
-
-          <!--Orders table------------------------>
-          <a href="file:///E:/BUE/Semester%202/Internet%20programming/Project%20Template/Hassan186042/Track_Order1.html"
-            id="Order1" class="OrderTitle"></a>
-          <div id="itemNames1">
-
-          </div>
-          <div id="prices1"></div>
-
-
-
-          <a href="file:///E:/BUE/Semester%202/Internet%20programming/Project%20Template/Hassan186042/Track_Order2.html"
-            id="Order2" class="OrderTitle"></a>
-          <div id="itemNames2">
-
-          </div>
-
-          <div id="prices2"></div>
-
-          <div id="content5">
-
-          </div>
-        </div>
-      </div>
+	<div id = "OrderHeaders"></div>
+	
+	<!--Orders table------------------------>
+	<a href="file:///E:/BUE/Semester%202/Internet%20programming/Project%20Template/Hassan186042/Track_Order1.html" id = "Order1" class = "OrderTitle"></a>
+    <div id = "itemNames1">
+	
+	</div>
+	<div id ="prices1" ></div>
+	
+	
+	
+	<a href= "file:///E:/BUE/Semester%202/Internet%20programming/Project%20Template/Hassan186042/Track_Order2.html" id = "Order2" class = "OrderTitle"></a>
+    <div id = "itemNames2">
+	
+	</div>
+	
+	<div id = "prices2"></div>
+	
+    <div id = "content5">
+	
+	</div>
+	</div>
+	 </div>
 
 
-      <div class="right_content">
+       <div class="right_content">
 
-        <div class="shopping_cart">
-          <div class="title_box">Shopping cart</div>
-          <div class="cart_details"> 3 items <br />
-            <span class="border_cart"></span> Total: <span class="price">350egp</span>
-          </div>
-          <div class="cart_icon"><a href="#"><img src="../images/shoppingcart.png" alt="" width="35" height="35"
-                border="0" /></a></div>
+        <div class="anime">
+          <a href="/Cart/shoppingCart.html"> <img  src="../images/shoppingcart.png" height="150px" width="150px"></a>
+
         </div>
 
-      </div>
+		
+        <div class="shopping-cart" id="shc">
+
+          <div class="title1">
+            Shopping Cart
+          </div>
+		</div>
+		</div>
+		  
 
     </div>
     <div class="footer">
