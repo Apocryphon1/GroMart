@@ -633,11 +633,9 @@ msg-e p {
 
 /* Manage Accounts Adham183024 */
 
-#usersTable tr {
+#usersTable tbody tr {
    display: none;
 }
-
-
 
 .table-MA {
    border-collapse: collapse;

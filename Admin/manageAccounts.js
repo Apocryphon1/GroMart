@@ -25,7 +25,7 @@ oReq.open("get", "retrieveAccounts.php", true);
 oReq.send();
 
 function addAttributes(array) {
-    buildTable(allUsers);
+    buildTable(array);
 }
 
 function addRow(user) {
@@ -52,8 +52,8 @@ function buildTable(arr) {
     });
 
     $(document).ready(function () {
-        $('#usersTable').after('<div id="pagination"></div>');
-        var rowsShown = 12; // Don't Ask why it divides by 2.
+        $('#usersTable').after('<div id="pagination" class="pagination"></div>');
+        var rowsShown = 12;
         var rowsTotal = $('#usersTable tbody tr').length;
         var numPages = rowsTotal / rowsShown;
 
@@ -61,7 +61,6 @@ function buildTable(arr) {
             var pageNum = i + 1;
             $('#pagination').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
         }
-        $('#pagination').addClass("pagination");
         $('#usersTable tbody tr').hide();
         $('#usersTable tbody tr').slice(0, rowsShown).show();
         $('#pagination a:first').addClass('active');
@@ -78,7 +77,7 @@ function buildTable(arr) {
     });
 
 
-}
+};
 
 
 $(document).ready(function () {

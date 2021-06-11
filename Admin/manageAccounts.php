@@ -50,9 +50,9 @@
             </div>
 
             <div class="center_content">
-                <a class="round-button-MA pull-right">
+                <!-- <a class="round-button-MA pull-right">
                     <span class="material-icons" style="margin-top:7px">add</span>
-                </a>
+                </a> -->
                 <table id="usersTable" class="table-MA">
                     <thead>
                         <tr>
