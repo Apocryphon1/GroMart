@@ -7,9 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script src="manageAccounts.js"></script>
-    <?php include 'retrieveAccounts.php' ?>
+    <script src="shoppingCart.js"></script>
+    <?php include 'shoppingCartData.php' ?>
 </head>
 
 <body>
@@ -24,7 +23,7 @@
             </div>
 
         </div>
-        <div class="main_content">
+        <div id="main_content">
             <div id="menu_tab">
                 <ul class="menu">
                     <li><a href="../index.html" class="nav"> Home </a></li>
@@ -32,10 +31,10 @@
                     <li><a href="../Product/productList.html" class="nav">Products</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="#" class="nav">My account</a></li>
+                    <li><a href="../Login/MyAccount.html" class="nav">My account</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="../Order/MyOrders.html" class="nav">My Orders </a></li>
+                    <li><a href="../Order/myOrders.html" class="nav">My Orders </a></li>
                     <li class="divider"></li>
                     <li><a href="../Contact/contact.html" class="nav">Contact Us</a></li>
                     <li> <input type="text" name="newsletter" id="searchbox" value="" /></li>
@@ -45,30 +44,19 @@
 
             </div>
 
-            <div class="left_content">
-                <div class="title_box">Add Content</div>
+            <div class="center_content" style="min-height: 600px;">
+                <h1 style="margin-left: 150px;"><strong>Shopping Cart</strong> </h1>
+                <div id="shoppingCart" class="shopping_cart">
+                    <!-- Dynamic Building -->
+                </div>
             </div>
 
-            <div class="center_content">
-                <a class="round-button-MA pull-right tooltip" onclick="modalAdd();">
-                    <span class="material-icons" style="margin-top:7px">add</span>
-                    <span class="tooltiptext">Add User</span>
-                </a>
-                <table id="usersTable" class="table-MA">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Email Address</th>
-                            <th>Role</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="checkoutTab">
+                <div class="checkout">
+                    <h1 style="margin-left:7px"><strong>Total: </strong></h1>
+                    <span style="margin-left:7px;font-size:25px"><strong id="totalPrice">1250</strong><small> EGP</small> </span>
+                </div>
+                    <button class="checkOutButton" onclick="checkOutClick();">Proceed to checkout</button>
             </div>
             <div id="includedContent"></div>
 

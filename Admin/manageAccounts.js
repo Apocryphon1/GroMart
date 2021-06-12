@@ -25,7 +25,8 @@ oReq.open("get", "retrieveAccounts.php", true);
 oReq.send();
 
 function addAttributes(array) {
-    buildTable(allUsers);
+    buildTable(array);
+
 }
 
 function addRow(user) {
@@ -34,7 +35,6 @@ function addRow(user) {
 
         var rowCnt = usersTable.rows.length;
         var tr = usersTable.insertRow(rowCnt);
-        tr = usersTable.insertRow(rowCnt);
 
         counter = 0
         for (const property in user) {
@@ -44,16 +44,28 @@ function addRow(user) {
             td.innerHTML = user[property]
             counter++;
         }
+
+        tr.onclick = function (event) {
+            buildModal(user.ID);
+            document.getElementById('id01').style.display = 'block';
+        };
     });
 }
+
+function modalAdd() {
+    buildModal();
+    document.getElementById('id01').style.display = 'block';
+};
+
+
 function buildTable(arr) {
     arr.forEach(child => {
         addRow(child);
     });
 
     $(document).ready(function () {
-        $('#usersTable').after('<div id="pagination"></div>');
-        var rowsShown = 12; // Don't Ask why it divides by 2.
+        $('#usersTable').after('<div id="pagination" class="pagination"></div>');
+        var rowsShown = 8;
         var rowsTotal = $('#usersTable tbody tr').length;
         var numPages = rowsTotal / rowsShown;
 
@@ -61,7 +73,6 @@ function buildTable(arr) {
             var pageNum = i + 1;
             $('#pagination').append('<a href="#" rel="' + i + '">' + pageNum + '</a> ');
         }
-        $('#pagination').addClass("pagination");
         $('#usersTable tbody tr').hide();
         $('#usersTable tbody tr').slice(0, rowsShown).show();
         $('#pagination a:first').addClass('active');
@@ -78,13 +89,49 @@ function buildTable(arr) {
     });
 
 
-}
+};
 
+function buildModal(id) {
+    modalID = id;
+    if (modalID != null) {
+
+        document.getElementById("modalTitle").innerHTML = "Edit User";
+        document.getElementById("modalDeleteBtn").style.display = "inline";
+        document.getElementById("modalUpdateBtn").style.display = "inline";
+        document.getElementById("modalAddBtn").style.display = "none";
+
+        allUsers.forEach(function (user) {
+            if (user.ID == modalID) {
+                document.getElementById("idMA").value = user.ID;
+                document.getElementById("usernameMA").value = user.username;
+                document.getElementById("passwordMA").value = user.password;
+                document.getElementById("emailMA").value = user.email;
+                document.getElementById("roleMA").value = user.role;
+            }
+        });
+    } else {
+        document.getElementById("modalTitle").innerHTML = "Add User";
+        document.getElementById("modalDeleteBtn").style.display = "none";
+        document.getElementById("modalUpdateBtn").style.display = "none";
+        document.getElementById("modalAddBtn").style.display = "inline";
+
+        document.getElementById("idMA").value = "";
+        document.getElementById("usernameMA").value = "";
+        document.getElementById("passwordMA").value = "";
+        document.getElementById("emailMA").value = "";
+        document.getElementById("roleMA").value = "user";
+    }
+
+}
 
 $(document).ready(function () {
     $("#flip").click(function () {
         $("#panel").slideDown("slow");
     });
+});
+
+$(function () {
+    $("#includedContent").load("editModal.html");
 });
 
 
