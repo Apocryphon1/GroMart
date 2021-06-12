@@ -633,6 +633,130 @@ msg-e p {
 
 /* Manage Accounts Adham183024 */
 
+* {
+   box-sizing: border-box
+}
+
+.tooltip {
+   position: relative;
+   display: inline-block;
+   border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+   visibility: hidden;
+   font-size: 12px;
+   width: 120px;
+   height: 35px;
+   bottom: 100%;
+   left: 50%;
+   margin-left: -60px;
+   background-color: #555;
+   color: #fff;
+   text-align: center;
+   padding-top: 0px;
+   padding-bottom: 5px;
+   border-radius: 6px;
+   position: absolute;
+   z-index: 1;
+   opacity: 0;
+   transition: opacity .6s;
+}
+
+.tooltip:hover .tooltiptext {
+   visibility: visible;
+   opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+   content: " ";
+   position: absolute;
+   top: 100%; 
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: black transparent transparent transparent;
+}
+
+.modal-MA input[type="submit"] {
+   background-color: #04AA6D;
+   color: white;
+   padding: 14px 20px;
+   margin-top: 20px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
+   float: left;
+   width: 50%;
+}
+
+.modal-MA input[type="submit"]:hover {
+   opacity: 1;
+}
+
+.modal-MA input[type="submit"].deletebtn {
+   background-color: #f44336;
+}
+
+.modal-MA .container {
+   padding: 16px;
+   text-align: left;
+   margin: 20px auto;
+}
+
+.modal-MA {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.75);
+   padding-top: 50px;
+}
+
+.modal-content {
+   font-size: 20px;
+   background-color: #fefefe;
+   margin: 5% auto 15% auto;
+   border: 1px solid #888;
+   width: 50%;
+   opacity: 1;
+}
+
+.modal-content input[type=text], select {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+
+.close-Modal {
+   position: absolute;
+   right: 35px;
+   top: 15px;
+   font-size: 40px;
+   font-weight: bold;
+   color: #f1f1f1;
+}
+
+.close-Modal:hover, .close-Modal:focus {
+   color: #f44336;
+   cursor: pointer;
+}
+
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
 #usersTable tbody tr {
    display: none;
 }
@@ -671,9 +795,9 @@ msg-e p {
 }
 
 .pull-right {
-   position: absolute;
-   right: 500px;
-   top: 205px;
+   position: relative;
+   left: 125%;
+   top: 69px;
 }
 
 .round-button-MA {

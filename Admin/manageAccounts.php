@@ -50,9 +50,10 @@
             </div>
 
             <div class="center_content">
-                <!-- <a class="round-button-MA pull-right">
+                <a class="round-button-MA pull-right tooltip" onclick="modalAdd();">
                     <span class="material-icons" style="margin-top:7px">add</span>
-                </a> -->
+                    <span class="tooltiptext">Add User</span>
+                </a>
                 <table id="usersTable" class="table-MA">
                     <thead>
                         <tr>
@@ -69,6 +70,7 @@
                     </tbody>
                 </table>
             </div>
+            <div id="includedContent"></div>
 
         </div>
         <!-- end of main content -->

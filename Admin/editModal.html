@@ -1,0 +1,31 @@
+<div id="id01" class="modal-MA">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close-Modal"
+        title="Close Modal">&times;</span>
+    <form class="modal-content" method="post" action='editAccounts.php'>
+        <div class="container">
+            <h1 id="modalTitle"></h1>
+
+            <input type="text" id="idMA" name="id" style="display: none;">
+
+            <label for="username">Username</label>
+            <input type="text" id="usernameMA" name="username" placeholder="Username" required>
+
+            <label for="password">Password</label>
+            <input type="text" id="passwordMA" name="password" placeholder="Password" required>
+
+            <label for="email">E-Mail</label>
+            <input type="text" id="emailMA" name="email" placeholder="E-mail" required>
+
+            <label for="role">Role</label>
+            <select id="roleMA" name="role" required>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            <div class="clearfix">
+                <input type="submit" class="deletebtn" id="modalDeleteBtn" name ="delete" value="Delete">
+                <input type="submit" class="updatebtn" id="modalUpdateBtn" name ="save" value="Save">
+                <input type="submit" class="addbtn" id="modalAddBtn" name ="insert" value="Add" style="margin-left: 25%;">
+            </div>
+        </div>
+    </form>
+</div>
