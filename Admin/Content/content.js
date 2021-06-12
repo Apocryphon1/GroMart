@@ -78,12 +78,6 @@ function addRow(item) {
   });
 }
 
-$(document).ready(function () {
-  $("#flip").click(function () {
-    $("#panel").slideDown("slow");
-  });
-});
-
 
 
 

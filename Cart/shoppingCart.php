@@ -63,21 +63,7 @@
         </div>
         <!-- end of main content -->
 
-        <div class="footer">
-            <div id="flip">click to show footer</div>
-            <div id="panel">
-
-                <div class="left_footer"> <img src="../images/logo%20(2).png" alt="" width="89" height="80" /> </div>
-                <div class="center_footer"> All Rights Reserved 2008<br />
-
-                    <img src="../images/payment.gif" alt="" height="25px">
-                </div>
-
-                <img height="150px" src="../images/popular-market.jpg">
-            </div>
-
-
-        </div>
+        <?php include '/gromart/includes/footer.php' ?>
     </div>
     <!-- end of main_container -->
 </body>

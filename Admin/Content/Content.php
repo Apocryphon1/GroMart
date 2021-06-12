@@ -5,7 +5,7 @@
   <title>Online Grocery Shop</title>
   <meta charset="UTF-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../../style.css" />
+  <link rel="stylesheet" type="text/css" href="/gromart/style.css" />
   <script src="content.js"></script>
   <?php include 'getProduct.php' ?>
 
@@ -21,9 +21,9 @@
       <div class="top_right">
         <div class="languages">
           <div class="lang_text">Languages:</div>
-          <a href="#" class="lang"><img src="../../images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img src="../../images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
+          <a href="#" class="lang"><img src="/gromart//images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img src="/gromart//images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
         </div>
-        <div> <a href="../../images/logo%20(2).png"></a></div>
+        <div> <a href="/gromart//images/logo%20(2).png"></a></div>
       </div>
 
     </div>
@@ -33,7 +33,7 @@
         <ul class="menu">
 
 
-          <li><a href="../../Login/MyAccount.php" class="nav">My account</a></li>
+          <li><a href="/gromart//Login/MyAccount.php" class="nav">My account</a></li>
           <li class="divider"></li>
 
           <li><a href="../manageAccounts/manageAccounts.php" class="nav"> Manage Accounts </a></li>
@@ -128,21 +128,7 @@
 
         </div>
       </div>
-      <div class="footer">
-        <div id="flip">click to show footer</div>
-        <div id="panel">
-
-          <div class="left_footer"> <img src="../../images/logo%20(2).png" alt="" width="89" height="80" /> </div>
-          <div class="center_footer"> All Rights Reserved 2008<br />
-
-            <img src="../../images/payment.gif" alt="" height="25px">
-          </div>
-
-          <img height="150px" src="../../images/popular-market.jpg">
-        </div>
-
-
-      </div>
+      <?php include '/gromart//includes/footer.php'?>
 </body>
 
 </html>

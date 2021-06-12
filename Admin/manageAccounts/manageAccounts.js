@@ -124,11 +124,7 @@ function buildModal(id) {
 
 }
 
-$(document).ready(function () {
-    $("#flip").click(function () {
-        $("#panel").slideDown("slow");
-    });
-});
+
 
 $(function () {
     $("#includedContent").load("editModal.html");

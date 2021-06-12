@@ -17,8 +17,7 @@
       <div class="top_right">
         <div class="languages">
           <div class="lang_text">Languages:</div>
-          <a href="#" class="lang"><img src="../images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img
-              src="../images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
+          <a href="#" class="lang"><img src="../images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img src="../images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
         </div>
         <div> <a href="../images/logo%20(2).png"></a></div>
       </div>
@@ -71,36 +70,22 @@
           </div>
         </div>
       </div>
-  
+
       <div class="current_navigation"> Navigation: <span class="current">Contact Us</span> </div>
       <div id="poll">
         <h3>Do you like our service so far?</h3>
-        <form action = "pollvote.php" method = "post" >
-        Yes: <input type="radio" name="vote" value="1" onclick="getVote(this.value)"><br>
-        No : <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
-      
+        <form action="pollvote.php" method="post">
+          Yes: <input type="radio" name="vote" value="1" onclick="getVote(this.value)"><br>
+          No : <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
+
         </form>
-        </div>
-
-
-
-    </div>
-   
-    <div class="footer">
-      <div id="flip">click to show footer</div>
-      <div id="panel">
-
-        <div class="left_footer"> <img src="../images/logo%20(2).png" alt="" width="89" height="80" /> </div>
-        <div class="center_footer"> All Rights Reserved 2008<br />
-
-          <img src="../images/payment.gif" alt="" height="25px">
-        </div>
-
-        <img height="150px" src="../images/popular-market.jpg">
       </div>
 
 
+
     </div>
+
+    <?php include '/gromart/includes/footer.php' ?>
 
 
   </div>
