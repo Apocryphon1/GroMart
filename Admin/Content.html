@@ -62,11 +62,10 @@
 
               <div class="box-head">
                 <h2 class="left">Current Products</h2>
-                <div class="right">
-                  <label> Search Products</label>
-                  <input id="myInput" type="text" class="field" />
-
-                </div>
+                <form>
+                  <input type="text" size="30" onkeyup="showResult(this.value)">
+                  <div id="lsearch"></div>
+                  </form>
               </div>
 
               <div class="table">
@@ -86,7 +85,8 @@
                     </td>
                     <td class="d1">12.05.09</td>
                     <td><a href="#">Administrator</a></td>
-                    <td><a onclick="removee(1)" href="#" class="ico del">Delete</a></td>
+                    <td><a name= "dell"  onclick="removee(1)" href="#" class="ico del"> 
+                      Delete</a></td>
                   </tr>
                   <tr id="re2">
 
@@ -95,7 +95,7 @@
                     </td>
                     <td class="d1">1.12.09</td>
                     <td><a href="#">Administrator2</a></td>
-                    <td><a onclick="removee(2)" href="#" class="ico del">Delete</a></td>
+                    <td><a name= "dell"  onclick="removee(2)" href="#" class="ico del">Delete </a></td>
                   </tr>
                   <tr id="re3">
 
@@ -104,7 +104,7 @@
                     </td>
                     <td class="d1">1.1.09</td>
                     <td><a href="#">Administrator2</a></td>
-                    <td><a onclick="removee(3)" href="#" class="ico del">Delete</a></td>
+                    <td><a name= "dell"  onclick="removee(3)" href="#" class="ico del">Delete </a></td>
                   </tr>
                   <tr id="re4">
 
@@ -113,7 +113,7 @@
                     </td>
                     <td class="d1">3.1.06</td>
                     <td><a href="#">Administrator</a></td>
-                    <td><a onclick="removee(4)" href="#" class="ico del">Delete</a></td>
+                    <td><a name= "dell" onclick="removee(4)" href="#" class="ico del">Delete </a></td>
                   </tr>
                 </table>
 
@@ -127,11 +127,28 @@
 
             </div>
 
+<form action = "AddProduct.php" method = "POST">
+            <div class="form_row">
+              <label class="contact"><strong>ID:</strong></label>
+              <input name = "x1"  id="ii2" type="text" class="contact_input" />
+            </div>
 
-
-
-          </div>
-
+            <div class="form_row">
+              <label class="contact"><strong>NAME:</strong></label>
+              <input name = "x2" id="ii2" type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>DESCRIPTION:</strong></label>
+              <input name = "x3" id="ii2" type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>PRICE:</strong></label>
+              <input name = "x4" id="ii2" type="text" class="contact_input" />
+            </div>
+            <form id=kh action="AddProduct.php" method="POST">
+              <input onclick="addpro()" type="submit" value="ADD" />
+          </form>
+</form>
           <div class="cl">&nbsp;</div>
         </div>
 

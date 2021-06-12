@@ -59,6 +59,23 @@ function removee(y) {
 
 
 
+function Result(str) {
+  if (str.length==0) {
+    document.getElementById("lsearch").innerHTML="";
+ 
+    return;
+  }
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("lsearch").innerHTML=this.responseText;
+      document.getElementById("lsearch").style.border="5px solid #A5ACB2";
+    }
+  }
+  xmlhttp.open("GET","lsearch.php?q="+str,true);
+  xmlhttp.send();
+}
+
 
 
 

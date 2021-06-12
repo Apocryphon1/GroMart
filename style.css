@@ -1036,7 +1036,9 @@ p.bold {
    padding-right: 120px;
 }
 
-a.OrderTitle:hover {
-   Color: #199ECD;
-   ;
+a.OrderTitle:hover{
+	
+	Color:#199ECD;;
+	
 }
+

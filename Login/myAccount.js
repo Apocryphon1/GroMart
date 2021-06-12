@@ -39,10 +39,10 @@ function validate() {
     if (document.getElementById("username").value.includes("admin")) {
 
         window.alert("welcome admin!");
-        window.open("Content.html");
+       
     }
 
-    window.alert("successful login!");
+ 
 }
 
 
