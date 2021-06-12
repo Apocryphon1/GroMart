@@ -1,5 +1,5 @@
 <?php
-include '../PHP/config.php';
+include '../../PHP/config.php';
 
 $sql = "SELECT ID, username, email, role, password FROM useraccount";
 $result = $db->query($sql);
