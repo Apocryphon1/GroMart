@@ -31,7 +31,7 @@ function addItem(item, counter) {
 
 
         var deleteForm = document.createElement('form');
-        deleteForm.action = "updateShoppingCart.php";
+        deleteForm.action = "updateshoppingCart.php";
         deleteForm.method = "POST";
         itemSC.appendChild(deleteForm);
 
@@ -78,7 +78,7 @@ function addItem(item, counter) {
         quantity.className = "quantity";
 
         var quantityForm = document.createElement('form');
-        quantityForm.action = "updateShoppingCart.php";
+        quantityForm.action = "updateshoppingCart.php";
         quantityForm.method = "POST";
         quantity.appendChild(quantityForm)
 

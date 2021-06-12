@@ -15,46 +15,10 @@
 
 
   <div id="main_container">
-    <div id="header">
-      <div class="top_right">
-        <div class="languages">
-          <div class="lang_text">Languages:</div>
-          <a href="#" class="lang"><img src="images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img
-              src="images/eg2.jpg" height="16.5px" width="22px" alt="" border="0" /></a>
-        </div>
-        <div> <a href="images/logo%20(2).png"></a></div>
-      </div>
-
-    </div>
+  <?php include 'includes/header.php' ?>
+  <?php include 'includes/nav.php' ?>
 
     <div id="main_content">
-      <div id="menu_tab">
-        <ul class="menu">
-          <li><a href="index.html" class="nav"> Home </a></li>
-          <li class="divider"></li>
-          <li><a href="Product/ProductList.html" class="nav">Products</a></li>
-          <li class="divider"></li>
-
-          <li><a href="PHP/MyAccount.php" class="nav">My account</a></li>
-          <li class="divider"></li>
-
-          <li><a href="Order/myOrders.html" class="nav">My Orders </a></li>
-          <li class="divider"></li>
-          <li><a href="Contact/contact.html" class="nav">Contact Us</a></li>
-
-          <form method="POST" action="index.php">
-
-            <li> <input type="text" name="name" id="searchbox" value=""  /></li>
-          <li> <img src="images/searchicon.png" id="srch" height="20px" width="20px"></li>
-
-        </form>
-
-      
-        
-
-        </ul>
-
-      </div>
 
       <div class="current_navigation"> Navigation: <span class="current">Home</span> </div>
       <div class="left_content">
@@ -169,7 +133,7 @@
       <div class="right_content">
 
         <div class="anime">
-          <a href="Cart/shoppingCart.html"> <img  src="images/shoppingcart.png" height="150px" width="150px"></a>
+          <a href="Cart/shoppingCart.php"> <img  src="images/shoppingcart.png" height="150px" width="150px"></a>
 
         </div>
 
@@ -199,7 +163,7 @@
 
     </div>
 
-    <?php include '/gromart//includes/footer.php'?>
+    <?php include 'includes/footer.php'?>
 
 
   </div>
