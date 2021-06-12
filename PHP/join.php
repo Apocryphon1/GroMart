@@ -10,6 +10,22 @@
       $mypassword1 = mysqli_real_escape_string($db,$_POST['p1']);
       $mypassword2 = mysqli_real_escape_string($db,$_POST['p2']);  
   
+     
+       
+      if (empty($_POST["u1"])) {
+           $emailErr = "Email is required";
+       }
+     
+       if (empty($_POST["u2"])) {
+         $nameErr = "username is required";
+       } 
+       if (empty($_POST["u3"])) {
+         $passError = "Password is required";
+       } 
+     
+      
+
+
       $sql2 = "INSERT INTO useraccount (Email,username,password)
       VALUES ( '$myemail', '$myusername', '$mypassword1' )  ";
 

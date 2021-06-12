@@ -59,7 +59,33 @@
 
         
           <form action="login.php" method="POST">
-            <h2>Account Info</h2>
+            <div id="wrappercard">
+
+        
+              <form >   
+              <div class="center_title_bar">Account Info   </div>
+              <br>
+              <br>
+         
+ 
+                </p>
+               
+    
+                <br>
+                <br>
+             
+              <div class="product_img"><a href="#"><img src="../images/account.png" alt="" border="2" height="180px"
+                    width="170px" /></a></div>
+   
+               <div class="prod_price"> <span id = "loglog"class="price">  
+                      <p style="font-size:180%;"> Hello:  <?php 
+                         include("session.php");
+                      $name = $_SESSION['login_user'];
+                  
+                      echo $name;
+                    
+                      ?> </p> </span></div>
+            </div>
             <p>
               <label  class="uname"> Your username </label>
               <input id="uname" name="username" required="required" type="text" placeholder="" />
@@ -71,7 +97,7 @@
             <p class="keeplogin">
               <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
               <label for="loginkeeping">Keep me logged in</label>
-              <button id="loginbutton" onclick="validate()">Login </button>
+              <button id="loginbutton" onclick="getLogin()">Login </button>
             </p>
 
             <br>
@@ -81,6 +107,7 @@
               Not a member yet ?
               <button id="flip">Join us</button>
             </p>
+           
           </form>
         </div>
 
@@ -121,7 +148,7 @@
           " onclick="validateJoin()"> Confirm </button>
           <br>
           <br>
-
+          
 
         </form>
 

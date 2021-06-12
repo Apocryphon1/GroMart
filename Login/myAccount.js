@@ -77,3 +77,17 @@ function validateJoin() {
 
     window.alert("successful Join!");
 }
+
+
+
+function logpg(){
+
+    document.getElementById("loginbutton").disabled = true;
+
+}
+
+function logout(){
+
+    window.location.replace ("MyAccount.php");
+
+}

@@ -55,35 +55,59 @@
 
 
 
-        <div id="wrappercard">
+        <div id="wrapper">
 
         
-          <form >   
-          <div class="center_title_bar">Account Info</div>
-            <p>
-            
-              
-            </p>
-           
+          <form action="login.php" method="POST">
+            <div id="wrappercard">
+
+        
+              <form >   
+              <div class="center_title_bar">Account Info   </div>
+              <br>
+              <br>
+         
+ 
+                </p>
+               
+    
+                <br>
+                <br>
+             
+              <div class="product_img"><a href="#"><img src="../images/account.png" alt="" border="2" height="180px"
+                    width="170px" /></a></div>
+   
+               <div class="prod_price"> <span id = "loglog"class="price">  
+                      <p style="font-size:180%;"> Hello:  <?php 
+                         include("session.php");
+                      $name = $_SESSION['login_user'];
+                  
+                      echo $name;
+                    
+                      ?> </p> </span></div>
+            </div>
+            <div id="menu_tab">
+        <ul class="menu">
+         
+          <li><a href="../Admin/Content.html" class="nav">Edit Content</a></li>
+          <li class="divider"></li>
+
+          <li><a href="../Admin/manageAccounts.php" class="nav">Manage Accounts</a></li>
+          <li class="divider"></li>
+
+          
+      
+
+        </ul>
+
+      </div>
+
 
             <br>
             <br>
-         
-          <div class="product_img"><a href="#"><img src="../images/account.png" alt="" border="2" height="180px"
-                width="170px" /></a></div>
-            
-        </div>
-        <div class="border_box">
-          <div class="product_title"><a href="#">
-            
-            
-            <?php
-   include('session.php');
-  $nameof = $_SESSION['login_user'];
- echo $nameof;
- 
-?></a></div>
-       
+
+           
+           
           </form>
         </div>
 
@@ -92,24 +116,12 @@
 
       </div>
 
-      <?php
-  
-  $nameof = $_SESSION['login_user'];
-
- 
-
-     if ( strpos($nameof, 'admin') !== false ){
-       
-       header("location: ../Admin/Content.html");
-
-     }
 
 
-     ?>
 
     </div>
 
-  
+    
 
 
   </div>

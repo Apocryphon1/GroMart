@@ -7,8 +7,17 @@
       
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
 
+
+      if (empty($_POST["username"])) {
+         $nameErr = "Name is required";
+       } 
+     
+       if (empty($_POST["password"])) {
+         $emailErr = "password is required";
+       } 
+     
+   
 
       $sqlu = "SELECT * FROM useraccount 
        WHERE username = '$myusername' and password = '$mypassword'";
@@ -25,17 +34,24 @@
   
 		
       if($countu == 1) {
-         if(isset($_REQUEST["loginkeeping"]) && $_REQUEST["loginkeeping"]==1)
-	setcookie("loginname",$myusername,time()+60);
+         if(isset($_REQUEST["loginkeeping"]) && $_REQUEST["loginkeeping"]==1){
+	setcookie("login",$myusername,time()+60);
+         }
+else {
 
-else{
-	setcookie("login","1");
-	 }
-        session_start();
+   setcookie("login",$myusername,time()-1);
+}
+     
 
          $_SESSION['login_user'] = $myusername;
          
-         header("location: loginSuccess.php");
+
+         if ($myusername === "adhamahmed"){
+            header("location: AdminAccount.php");
+
+         }
+else{
+         header("location: MyAccount.php");}
       }else {
          $error = "Your Login Name or Password is invalid";
       }
@@ -43,9 +59,9 @@ else{
    }
 
 
-
+ 
    
 
 
-   mysqli_close($db);
+
 ?>

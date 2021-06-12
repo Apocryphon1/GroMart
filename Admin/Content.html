@@ -36,7 +36,7 @@
           <li><a href="../Login/MyAccount.html" class="nav">My account</a></li>
           <li class="divider"></li>
 
-          <li><a href="../Admin/manageAccounts.html" class="nav"> Manage Accounts </a></li>
+          <li><a href="../Admin/manageAccounts.php" class="nav"> Manage Accounts </a></li>
           <li class="divider"></li>
           <li><a href="Content.html" class="nav">Edit Content</a></li>
 
@@ -115,10 +115,24 @@
                     <td><a href="#">Administrator</a></td>
                     <td><a name= "dell" onclick="removee(4)" href="#" class="ico del">Delete </a></td>
                   </tr>
+                  <tr id="re5">
+
+                    <td>
+                      <h3><a href="#"> 
+                    <script>    document.getElementById("ii22").value;</script></a></h3>
+                    </td>
+                    <td class="d1"> <script>const d = new Date();
+                      document.getElementById("demo").innerHTML = d.getTime();</script></td>
+
+                    <td><a href="#">Administrator</a></td>
+                    <td><a name= "dell" onclick="removee(4)" href="#" class="ico del">Delete </a></td>
+                  </tr>
+                 
                 </table>
 
                 <br>
                 <br>
+                
                 <br>
 
 
@@ -127,7 +141,7 @@
 
             </div>
 
-<form action = "AddProduct.php" method = "POST">
+<form action = "../PHP/AddProduct.php" method = "POST">
             <div class="form_row">
               <label class="contact"><strong>ID:</strong></label>
               <input name = "x1"  id="ii2" type="text" class="contact_input" />
@@ -135,19 +149,20 @@
 
             <div class="form_row">
               <label class="contact"><strong>NAME:</strong></label>
-              <input name = "x2" id="ii2" type="text" class="contact_input" />
+              <input name = "x2" id="ii22" type="text" class="contact_input" />
             </div>
             <div class="form_row">
               <label class="contact"><strong>DESCRIPTION:</strong></label>
-              <input name = "x3" id="ii2" type="text" class="contact_input" />
+              <input name = "x3" id="ii222" type="text" class="contact_input" />
             </div>
             <div class="form_row">
               <label class="contact"><strong>PRICE:</strong></label>
-              <input name = "x4" id="ii2" type="text" class="contact_input" />
+              <input name = "x4" id="ii2222" type="text" class="contact_input" />
             </div>
-            <form id=kh action="AddProduct.php" method="POST">
-              <input onclick="addpro()" type="submit" value="ADD" />
-          </form>
+           
+              <input  type="submit" value="ADD" />
+        
+         
 </form>
           <div class="cl">&nbsp;</div>
         </div>
