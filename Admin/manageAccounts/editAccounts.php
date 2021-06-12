@@ -1,5 +1,5 @@
 <?php
-include '../PHP/config.php';
+include '../../PHP/config.php';
 
 $id = $username = $password = $email = $role = "";
 
@@ -42,8 +42,7 @@ if ($_POST["delete"]) {
 };
 
 if ($_POST["insert"]) {
-    $sql = "INSERT INTO `useraccount` (`email`, `username`, `password`, `role`)
-VALUES ('$email', '$username', '$password', '$role')";
+    $sql = "INSERT INTO `useraccount` (`email`, `username`, `password`, `role`) VALUES ('$email', '$username', '$password', '$role')";
 
     if ($db->query($sql) === TRUE) {
         echo "New record created successfully";
